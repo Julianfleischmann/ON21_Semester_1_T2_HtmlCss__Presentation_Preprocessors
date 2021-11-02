@@ -1,0 +1,62 @@
+:root {
+    --background-color: #fff;
+    --text-color: rgb(45, 45, 60);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.jf-codetext {
+    font-family: var(--font-code-stack);
+}
+
+.jf-codetext pre {
+    font-family: var(--font-code-stack);
+}
+
+.jf-icons {
+    max-height: 8rem;
+}
+
+
+.carousel-item .jf-slider-toggle-btn{
+    z-index: 1;
+    position: absolute;
+    bottom: 2.5rem;
+
+}
+
+.jf-footer-border {
+    border-bottom: 2px solid var(--primary-dark);
+}
+
+.jf-footer-icons {
+    max-height: 35px;
+    margin: .25rem;
+}
+
+section #anmeldung::before {
+    display: block;
+    content: ' ';
+    height: 300px;
+    margin-top: -300px;
+
+}
+
+a.navbar-brand {
+    margin-right: calc(50% - 30px);
+}
+
+
+@media screen and (min-width: 992px) {
+    a.navbar-brand {
+
+        margin-right: 1rem;
+    }
+
+    .jf-preprocessor-logos {
+        max-height: 250px;
+    }
+}

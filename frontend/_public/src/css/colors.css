@@ -1,0 +1,66 @@
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #203c4e;
+    --primary-dark: #12232c;
+    --secondary: #ECE0E0FF;
+    --secondary-dark: rgb(200, 160, 120);
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: rgb(25, 25, 40);
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--primary-dark) !important;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+    color: var(--secondary); /* Todo: nochmal überarbeiten */
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.text-secondary {
+    color: var(--secondary) !important;
+}
+
+.text-secondary-dark {
+    color: var(--secondary-dark) !important;
+}
+
+a {
+    color: var(--primary-dark);
+}
+
+a:focus, a:hover {
+    color: var(--secondary-dark);
+}
+
+a.text-secondary:focus, a.text-secondary:hover {
+    color: var(--secondary-dark) !important;
+}
+
+a.text-primary:focus, a.text-primary:hover {
+    color: var(--primary-dark) !important;
+}
+

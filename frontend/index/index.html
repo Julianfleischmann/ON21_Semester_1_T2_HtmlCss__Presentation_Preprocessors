@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Präprozessoren</title>
+    <link rel="stylesheet" href="../_public/src/css/all.css"/>
+    <link rel="icon" type="image/png" href="../_public/src/img/icons/Logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+
+<main>
+    <!-- Begin of the header -->
+    <header>
+
+    </header>
+    <!-- End of the header -->
+
+    <!-- Begin of the content -->
+    <div class="content">
+
+        <div class="carousel-inner vh-100 list-unstyled">
+
+            <!-- Starfolie START -->
+            <section id="item-0" class="vh-100 jf-content-section">
+                <div class="row h-100">
+                    <div class="col-12 jf-heading-container d-flex flex-column justify-content-center align-items-center">
+                        <h1 class="pb-5 border-bottom">CSS Preprocessors</h1>
+                        <h3 class="pt-5">Gloria und Julian</h3>
+                    </div>
+                </div>
+            </section>
+            <!-- Startfolie? ENDE -->
+
+            <!-- Was ist ein Präprozessor? START -->
+            <section id="item-10" class="vh-100 jf-content-section">
+                <div class="row h-100">
+                    <div class="col-4 jf-heading-container d-flex flex-column justify-content-center align-items-center">
+                        <h2>Was ist ein Präprozessor?</h2>
+                    </div>
+                    <div class="col-8 jf-content-container p-5">
+
+                        <div>
+                            <ul class="pb-5">
+                                <li>Eine Art "Konverter" zur Verarbeitung von Eingabetext in das Ergebnis</li>
+                            </ul>
+                        </div>
+
+                        <div class="jf-codeblock">
+                            <p class="jf-codetext fw-bold">
+                            <pre>Precompiled Example</pre>
+                            </p>
+                        </div>
+
+                        <!-- Pfeil -->
+                        <div class="d-flex justify-content-center mt-3 mb-3">
+                            <i class="text-primary fa fa-arrow-down"></i>
+                        </div>
+
+                        <div class="jf-codeblock">
+                            <p class="jf-codetext fw-bold">
+                            <pre>Compiler</pre>
+                            </p>
+                        </div>
+
+                        <!-- Pfeil -->
+                        <div class="d-flex justify-content-center mt-3 mb-3">
+                            <i class="text-primary fa fa-arrow-down"></i>
+                        </div>
+
+
+                        <div class="jf-codeblock">
+                            <p class="jf-codetext fw-bold">
+                            <pre>Compiled Example</pre>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Was ist ein Präprozessor? ENDE -->
+
+            <!-- Welche PP gibt es? START -->
+            <section id="item-20" class="vh-100 jf-content-section">
+                <div class="row h-100">
+                    <div class="col-4 jf-heading-container d-flex flex-column justify-content-center align-items-center">
+                        <h2>Welche CSS Präprozessoren gibt es?</h2>
+                    </div>
+                    <div class="col-8 jf-content-container p-5">
+                        <div>
+                            <ul>
+                                <li>SCSS</li>
+                                <li>SASS</li>
+                                <li>LESS</li>
+                                <li><i class="fa fa-arrow-right"></i> CSS-abwärtskompatibel</li>
+                            </ul>
+                        </div>
+
+                        <div class="row pt-5 mt-5">
+                            <div class="col-6 d-flex ">
+                                <img class="jf-preprocessor-logos" src="../_public/src/img/emotion/less_logo.png" alt="SCSS Logo" />
+                            </div>
+                            <div class="col-6 d-flex">
+                                <img class="jf-preprocessor-logos" src="../_public/src/img/emotion/sass-logo.png" alt="SCSS Logo" />
+                            </div>
+                        </div>
+
+                        <!-- todo Evtl Bilder hier?? -->
+                    </div>
+                </div>
+            </section>
+            <!-- Welche PP gibt es? ENDE -->
+
+            <!-- Mixins START -->
+            <section id="item-30" class="vh-100 jf-content-section">
+                <div class="row h-100">
+                    <div class="col-4 jf-heading-container d-flex flex-column justify-content-center align-items-center">
+                        <h2>Mixins</h2>
+                    </div>
+                    <div class="col-8 jf-content-container p-5">
+                        <div>
+                            <ul>
+                                <li>Vergleichbar Methode</li>
+                                <li>Vererbbar</li>
+                            </ul>
+                        </div>
+                        <div class="jf-codeblock">
+                            <p class="jf-codetext fw-bold">
+                            <pre>@mixin abstandMitRahmen ($links, $rechts, $oben, $unten) {
+ margin: $oben $rechts $unten $links;
+ border: 1px solid green;
+}
+
+.klasse1 {
+ @include abstandMitRahmen(5px, 5px, 5px, 5px);
+}
+
+.klasse2 {
+ @include abstandMitRahmen(5px, 5px, 5px, 5px);
+}
+</pre>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Mixins ENDE -->
+
+            <!-- Mixins Beispiel START -->
+            <section id="item-40" class="vh-100 jf-content-section">
+                <div class="row h-100">
+                    <!--                    <div class="col-4 jf-heading-container d-flex justify-content-center align-items-center">-->
+                    <!--                        <h2>Mixins (Browserkompatibilität)</h2>-->
+                    <!--                    </div>-->
+                    <div class="col-12 jf-content-container p-5">
+                        <div class="row">
+                            <div class="jf-codeblock col-6 me-2">
+                                <p class="jf-codetext fw-bold">
+                                <pre>@mixin browserPrefix($property, $options) {
+ $prefixes: ('-webkit-', '-moz-', '-o-', '');
+
+ @each $prefix in $prefixes {
+   #{$prefix}#{$property}: $options;
+ }
+}
+
+.rounded-corners {
+ @include browserPrefix(border-radius, 10px);
+}
+</pre>
+                                </p>
+                                <p class="figure-caption">Datei.scss</p>
+                            </div>
+
+                            <div class="jf-codeblock col-5">
+                                <p class="jf-codetext fw-bold">
+                                <pre>.rounded-corners {
+ -webkit-border-radius: 10px;
+ -moz-border-radius: 10px;
+ -o-border-radius: 10px;
+ border-radius: 10px;
+}
+</pre>
+                                </p>
+                                <p class="figure-caption">Datei.css</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- Mixins Beispiel ENDE -->
+
+            <!-- Mixins nur SCSS START -->
+            <section id="item-50" class="vh-100 jf-content-section">
+                <div class="row h-100">
+                    <div class="col-4 jf-heading-container d-flex flex-column justify-content-center align-items-center">
+                        <h2>Mixins (Browserkompatibilität)</h2>
+                    </div>
+                    <div class="col-8 jf-content-container p-5">
+                        <div>
+                            <ul>
+                                <li>Stellen vollautomatisch Prefixe für ältere Browserversionen bereit</li>
+                            </ul>
+                        </div>
+                        <div class="jf-codeblock">
+                            <p class="jf-codetext fw-bold">
+                            <pre mb-3>@mixin browserPrefix($property, $options) {
+ $prefixes: ('-webkit-', '-moz-', '-o-', '');
+
+ @each $prefix in $prefixes {
+   #{$prefix}#{$property}: $options;
+ }
+}
+
+.rounded-corners {
+ @include browserPrefix(border-radius, 10px);
+}
+
+</pre>
+                            </p>
+                        </div>
+
+
+
+                            <div class="col-12 jf-content-container p-5">
+                                <div>
+                                    <img alt="Auszug aus der Website Caniuse.com"
+                                         src="../_public/src/img/emotion/flexible_layout.png"/>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- Mixins nur SCSS ENDE -->
+
+<!--            &lt;!&ndash; Mixins Browserkompatibilität START &ndash;&gt;-->
+<!--            <section id="item-60" class="vh-100 jf-content-section">-->
+<!--                <div class="row h-100">-->
+<!--                    <div class="col-4 jf-heading-container d-flex flex-column justify-content-center align-items-center">-->
+<!--                        <h2>Mixins (Browserkompatibilität)</h2>-->
+<!--                        <h3>Auszug Caniuse.com</h3>-->
+<!--                    </div>-->
+<!--                    <div class="col-8 jf-content-container p-5">-->
+<!--                        <div>-->
+<!--                            <img alt="Auszug aus der Website Caniuse.com"-->
+<!--                                 src="../_public/src/img/emotion/flexible_layout.png"/>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </section>-->
+<!--            &lt;!&ndash; Mixins Browserkompatibilität ENDE &ndash;&gt;-->
+
+            <!-- Nesting START -->
+            <section id="item-70" class="vh-100 jf-content-section">
+                <div class="row h-100">
+                    <div class="col-4 jf-heading-container d-flex flex-column justify-content-center align-items-center">
+                        <h2>Nesting</h2>
+                    </div>
+                    <div class="col-8 jf-content-container p-5">
+                        <div>
+                            <ul>
+                                <li>Verschachteln von CSS-Klassen und Anweisungen</li>
+                            </ul>
+                        </div>
+                        <div class="jf-codeblock mb-3">
+                            <p class="jf-codetext fw-bold">
+                            <pre>.wrapper {
+ .externerLink {
+   color: red;
+ }
+}
+</pre>
+                            </p>
+                            <p class="figure-caption">Datei.scss</p>
+
+                        </div>
+
+                        <div class="jf-codeblock">
+                        <p class="jf-codetext fw-bold">
+                        <pre>.wrapper .externerLink {
+ color: red;
+}
+</pre>
+
+                        </p>
+                        <p class="figure-caption">Datei.css</p>
+                        </div>
+                    </div>
+
+                </div>
+
+        </section>
+            <!-- Nesting ENDE -->
+
+            <!-- Variablen START -->
+            <section id="item-80" class="vh-100 jf-content-section">
+                <div class="row h-100">
+                    <div class="col-4 jf-heading-container d-flex flex-column justify-content-center align-items-center">
+                        <h2>Variablen</h2>
+                    </div>
+                    <div class="col-8 jf-content-container p-5">
+                        <div>
+                            <ul>
+                                <li>Mehrfachverwendung</li>
+                                <li>Mittlerweile auch in CSS möglich <li class="fa fa-arrow-right "></li> nur eingeschränkt!</li>
+                            </ul>
+                        </div>
+                        <div class="jf-codeblock mb-3">
+                            <p class="jf-codetext fw-bold">
+                            <pre>
+$primary-color: blue;
+.btn {
+      border-color: $primary-color;
+     .text {
+       color: $primary-color;
+     }
+}</pre>
+                            </p>
+                            <p class="figure-caption">Datei.scss</p>
+
+                        </div>
+
+                        <div class="jf-codeblock">
+                            <p class="jf-codetext fw-bold">
+                            <pre>.btn {
+     border-color: blue;
+    }
+.btn .text {
+     color: blue;
+}</pre>
+
+                            </p>
+                            <p class="figure-caption">Datei.css</p>
+                        </div>
+
+                        <div class="col-12 jf-content-container p-5">
+                            <div>
+                                <img alt="Auszug aus der Website Caniuse.com"
+                                     src="../_public/src/img/emotion/variables_caniuse.png"/>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- Variablen ENDE -->
+
+            <!-- Codemenge START -->
+            <section id="item-90" class="vh-100 jf-content-section">
+                <div class="row h-100">
+                    <div class="col-4 jf-heading-container d-flex flex-column justify-content-center align-items-center">
+                        <h2>Variablen</h2>
+                    </div>
+                    <div class="col-8 jf-content-container p-5">
+                        <div>
+                            <ul>
+                                <li>Einsparung des geschriebenen Codes</li>
+                            </ul>
+                        </div>
+                        <div class="jf-codeblock mb-3">
+                            <p class="jf-codetext fw-bold">
+                            <pre>$primary-color: blue;
+$secondary-color: green;
+.btn {
+ background: $primary-color;
+ .text {
+   color: $secondary-color;
+ }
+}
+</pre>
+                            </p>
+                            <p class="figure-caption">Datei.scss</p>
+
+                        </div>
+
+                        <div class="jf-codeblock">
+                            <p class="jf-codetext fw-bold">
+                            <pre>.btn {
+ background: blue;
+}
+.btn .text {
+ color: green;
+}
+</pre>
+
+                            </p>
+                            <p class="figure-caption">Datei.css</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- Codemenge ENDE -->
+
+            <!-- Praxisbeispiel START -->
+            <section id="item-100" class="vh-100 jf-content-section">
+                <div class="row h-100">
+                    <div class="col-4 jf-heading-container d-flex flex-column justify-content-center align-items-center">
+                        <h2>Praxisbeispiel</h2>
+                    </div>
+                    <div class="col-8 jf-content-container p-5">
+                        <div>
+                            <ul>
+                                <li><a target="_blank" href="https://shopwaredemo.noneddon.de/">Shopware Frontend</a></li>
+                                <li><a target="_blank" href="https://shopwaredemo.noneddon.de/admin">Shopware Admin</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- Praxisbeispiel ENDE -->
+
+            <!-- Schlussfolie START -->
+            <section id="item-1000" class="vh-100 jf-content-section">
+                <div class="row h-100">
+                    <div class="col-12 jf-heading-container d-flex flex-column justify-content-center align-items-center">
+                        <h1 class="pb-5 border-bottom">CSS Preprocessors</h1>
+                        <h3 class="pt-5">Vielen Dank!</h3>
+                    </div>
+                </div>
+            </section>
+            <!-- Schlussfolie ENDE -->
+
+            <!-- Praxisbeispiel START -->
+            <section id="quellen" class="vh-100 jf-content-section">
+                <div class="row h-100">
+                    <div class="col-4 jf-heading-container d-flex flex-column justify-content-center align-items-center">
+                        <h2>Quellen</h2>
+                    </div>
+                    <div class="col-8 jf-content-container p-5">
+                        <div>
+                            <ul>
+                                <li><a target="_blank" href="https://dev-supp.de/blog/sass-vs-scss-vs-less">https://dev-supp.de/blog/sass-vs-scss-vs-less</a></li>
+                                <li><a target="_blank" href="https://sass-lang.com/">https://sass-lang.com/</a></li>
+                                <li><a target="_blank" href="https://nextgeneration.mysign.ch/de/themen/wissen/frontend-entwicklung/scss-sass.html">https://nextgeneration.mysign.ch/de/themen/wissen/frontend-entwicklung/scss-sass.html</a></li>
+                                <li><a target="_blank" href="https://lesscss.org/">https://lesscss.org/</a></li>
+                                <li><a target="_blank" href="https://developers.shopware.com/designers-guide/less/">https://developers.shopware.com/designers-guide/less/</a></li>
+                                <li><a target="_blank" href="https://codepen.io/julian-fle/pen/eYEGZmb">https://codepen.io/julian-fle/pen/eYEGZmb</a></li>
+                                <li><a target="_blank" href="https://jsonformatter.org/scss-to-css">Als Tool: https://jsonformatter.org/scss-to-css</a></li>
+                                <li><a target="_blank" href="https://getbootstrap.com/">https://getbootstrap.com/</a></li>
+                                <li><a target="_blank" href="https://fontawesome.com/">https://fontawesome.com/</a></li>
+                                <li><a target="_blank" href="https://sass-lang.com/styleguide/brand">https://sass-lang.com/styleguide/brand</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- Praxisbeispiel ENDE -->
+
+        <div class="main-navigation">
+            <div class="container">
+                <!-- Begin of the navigation -->
+                <nav class="navbar navbar-expand-lg bg-secondary fixed-bottom">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav text-center d-flex justify-content-around w-100">
+                            <li class="nav-item"><a class="nav-link" href="#item-10">Ein Präprozessor?</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#item-20">Less, SCSS und co.</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#item-30">Mixins</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#item-40">Mixins Beispiel</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#item-50">Kompatibilität</a></li>
+<!--                            <li class="nav-item"><a class="nav-link" href="#item-60">Kompatibilität Beispiel</a></li>-->
+                            <li class="nav-item"><a class="nav-link" href="#item-70">Nesting</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#item-80">Variablen</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#item-90">Codemenge</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#item-100">Praxisbeispiel</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#item-1000">Danke!</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- End of the content -->
+
+    <!-- Begin of the footer -->
+    <footer class="bg-secondary text-secondary text-center pt-5 pb-5">
+        <div class="w-100">
+        <div class="row w-100 m-0">
+            <div class="col-12 pb-2">
+                <p>
+                    Ein Vortrag von Gloria Tamakloe und Julian Fleischmann<br>
+                    DHBW Mosbach | ON 21<br>
+                </p>
+                <a class="text-secondary" data-toggle="collapse" data-target="#quellen" href="#quellen">Quellen</a>
+            </div>
+        </div>
+
+
+        <div class="col-12 mt-2 pb-2">
+
+<!--                                <a class="text-secondary" data-toggle="collapse" data-target="#datenschutz" href="#datenschutz"-->
+<!--                                   aria-expanded="false"-->
+<!--                                   aria-controls="datenschutz"><b>Datenschutz</b> <i class="fas fa-angle-right"></i></a>                    -->
+<!--            -->
+            <!--                    <div class="container collapse multi-collapse p-3" id="datenschutz">-->
+
+            <!--                        <p>-->
+            <!--                            <strong>Datenschutzhinweise gemäß EU-Datenschutz-Grundverordnung (DSGVO)</strong>-->
+            <!--                            Wir setzen die seit dem 25. Mai 2018 geltende EU-Datenschutz-Grundverordnung (DSGVO) um,-->
+            <!--                            insbesondere, wenn es um die Verarbeitung Ihrer personenbezogenen Daten durch uns sowie um-->
+            <!--                            die Ihnen dabei zustehenden Rechte geht. Die Hinweise werden soweit erforderlich-->
+            <!--                            aktualisiert und sind im Detail nachlesbar unter:-->
+
+            <!--                        </p>-->
+        </div>
+        </div>
+
+
+        <div class="col-12 mt-5">
+            <a href="https://instagram.com/"><img class="jf-footer-icons"
+                                                  src="../_public/src/img/social/instagram.png" alt="Instagram"></a>
+        </div>
+
+        </div>
+        </div>
+
+    </footer>
+    <!-- End of the footer -->
+
+
+</main>
+
+
+</body>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<!--<script src="../_public/vendors/bootstrap-5.3.1-dist/js/jquery-3-4-1.min.js"></script>-->
+<!--<script src="../_public/vendors/bootstrap-5.3.1-dist/js/jquery-1.10.2.js"></script>-->
+<!--<script src="../_public/vendors/bootstrap-5.3.1-dist/js/popper.min.js"></script>-->
+<!--<script src="../_public/vendors/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>-->
+<!--<script src="../_public/vendors/bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>-->
+<!--<script src="../_public/vendors/bootstrap-5.3.1-dist/js/collapse.js"></script>-->
+
+<!--<script type="text/javascript" src="../_public/src/js/custom.js"></script>-->
+
+
+</html>

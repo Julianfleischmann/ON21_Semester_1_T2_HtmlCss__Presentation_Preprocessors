@@ -1,0 +1,37 @@
+.btn-primary {
+    color: var(--secondary);
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    color: var(--secondary);
+    background-color: var(--primary-dark);
+    border-color: var(--primary);
+}
+
+.btn-secondary {
+    color: var(--primary);
+    background-color: var(--secondary);
+    border-color: var(--font-base-stack);
+}
+
+.btn-secondary:hover {
+    color: var(--secondary);
+    background-color: var(--primary-dark);
+    border-color: var(--primary);
+}
+
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    background-color: var(--primary-dark);
+}
+
+.btn, .btn-lg {
+    border-radius: 0px;
+}
+
+.btn {
+    font-weight: bold;
+    padding: 0.25rem 0.75rem;
+}

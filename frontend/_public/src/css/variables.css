@@ -1,0 +1,7 @@
+:root {
+    --font-base-stack: "Oswald", sans-serif;
+    --font-headline-stack: "Oswald", sans-serif;
+    --font-code-stack: "Source Code Pro", monospace;
+
+    --font-base-size: 2rem;
+}

@@ -1,0 +1,50 @@
+.form-control {
+    background-color: transparent;
+    color: var(--primary);
+    border: none;
+    border-bottom: 2px solid var(--secondary-dark);
+    border-radius: 0px;
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+.form-check {
+    margin-bottom: .3rem;
+    padding-left: 1.9rem;
+}
+
+.custom-control {
+    padding-left: 1.9rem;
+}
+
+.form-control:focus {
+    color: var(--primary);
+    background-color: transparent;
+    border-color: transparent;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-control::placeholder {
+    color: var(--secondary-dark);
+
+}
+
+
+.custom-control-label::before {
+    border: 3px solid;
+    background: transparent;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    color: var(--primary);
+    border-color: var(--secondary-dark);
+    background-color: var(--primary);
+
+}
+
+.custom-radio .custom-control-input:checked~.custom-control-label::after {
+    background-image: none;
+}
+
+

@@ -1,0 +1,44 @@
+/* Hier werden die Schriftarten definiert */
+
+:root {
+    --font-family-sans-serif: "Oswald";
+}
+
+body {
+    font-family: var(--font-base-stack);
+    font-size: var(--font-base-size);
+    word-break: break-word;
+}
+
+h1, h2, .h1, .h2 {
+    font-family: var(--font-headline-stack);
+    font-weight: bold;
+}
+
+h1, .h1 {
+    font-size: 2rem
+}
+
+h2, .h2 {
+    font-size: 2rem;
+}
+
+
+
+@media screen and (min-width: 580px) {
+    h1, .h1 {
+        font-size: 6rem;
+    }
+
+    h2, .h2 {
+        font-size: 5rem;
+    }
+
+    h3, .h3 {
+        font-size: 3rem;
+    }
+
+    .jf-content-container ul li {
+        font-size: 2.5rem;
+    }
+}
