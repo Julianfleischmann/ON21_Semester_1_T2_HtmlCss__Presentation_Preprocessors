@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="../_public/src/css/all.css"/>
     <link rel="icon" type="image/png" href="../_public/src/img/icons/DHBW-Favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
 <body>
 
@@ -98,15 +97,33 @@
                         </div>
 
                         <div class="row pt-5 mt-5">
-                            <div class="col-6 d-flex ">
-                                <img class="jf-preprocessor-logos" src="../_public/src/img/emotion/less_logo.png" alt="SCSS Logo" />
+                            <div class="col-12 d-flex ">
+                                <div class="jf-codeblock">
+                                    <p class="jf-codetext fw-bold">
+                                    <pre>
+.wrapper {
+ .externerLink {
+   color: red;
+ }
+}
+                                        </pre>
+                                    </p>
+                                    <p class="figure-caption">Datei.scss</p>
+                                </div>
                             </div>
-                            <div class="col-6 d-flex">
-                                <img class="jf-preprocessor-logos" src="../_public/src/img/emotion/sass-logo.png" alt="SCSS Logo" />
+                            <div class="col-12 d-flex ">
+                                <div class="jf-codeblock">
+                                    <p class="jf-codetext fw-bold">
+                                    <pre>
+.wrapper
+ .externerLink
+   color: red
+                                        </pre>
+                                    </p>
+                                    <p class="figure-caption">Datei.sass</p>
+                                </div>
                             </div>
                         </div>
-
-                        <!-- todo Evtl Bilder hier?? -->
                     </div>
                 </div>
             </section>
@@ -141,6 +158,7 @@
 }
 </pre>
                             </p>
+
                         </div>
                     </div>
                 </div>
@@ -213,45 +231,55 @@
    #{$prefix}#{$property}: $options;
  }
 }
-
 .rounded-corners {
- @include browserPrefix(border-radius, 10px);
+ @include browserPrefix(flex, 3);
 }
-
 </pre>
                             </p>
+                            <p class="figure-caption">Datei.scss</p>
+                        </div>
+                        <div class="jf-codeblock">
+                            <p class="jf-codetext fw-bold">
+                            <pre mb-3>.rounded-corners {
+	 -webkit-flex: 3;
+	 -moz-flex: 3;
+	 -o-flex: 3;
+	 flex: 3;
+}
+</pre>
+                            </p>
+                            <p class="figure-caption">Datei.css</p>
                         </div>
 
 
-
-                            <div class="col-12 jf-content-container p-5">
-                                <div>
-                                    <img alt="Auszug aus der Website Caniuse.com"
-                                         src="../_public/src/img/emotion/flexible_layout.png"/>
-                                </div>
+                        <div class="col-12 jf-content-container p-5">
+                            <div>
+                                <img alt="Auszug aus der Website Caniuse.com"
+                                     src="../_public/src/img/emotion/flexible_layout.png"/>
                             </div>
+                        </div>
 
                     </div>
                 </div>
             </section>
             <!-- Mixins nur SCSS ENDE -->
 
-<!--            &lt;!&ndash; Mixins Browserkompatibilität START &ndash;&gt;-->
-<!--            <section id="item-60" class="vh-100 jf-content-section">-->
-<!--                <div class="row h-100">-->
-<!--                    <div class="col-4 jf-heading-container d-flex flex-column justify-content-center align-items-center">-->
-<!--                        <h2>Mixins (Browserkompatibilität)</h2>-->
-<!--                        <h3>Auszug Caniuse.com</h3>-->
-<!--                    </div>-->
-<!--                    <div class="col-8 jf-content-container p-5">-->
-<!--                        <div>-->
-<!--                            <img alt="Auszug aus der Website Caniuse.com"-->
-<!--                                 src="../_public/src/img/emotion/flexible_layout.png"/>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </section>-->
-<!--            &lt;!&ndash; Mixins Browserkompatibilität ENDE &ndash;&gt;-->
+            <!--            &lt;!&ndash; Mixins Browserkompatibilität START &ndash;&gt;-->
+            <!--            <section id="item-60" class="vh-100 jf-content-section">-->
+            <!--                <div class="row h-100">-->
+            <!--                    <div class="col-4 jf-heading-container d-flex flex-column justify-content-center align-items-center">-->
+            <!--                        <h2>Mixins (Browserkompatibilität)</h2>-->
+            <!--                        <h3>Auszug Caniuse.com</h3>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-8 jf-content-container p-5">-->
+            <!--                        <div>-->
+            <!--                            <img alt="Auszug aus der Website Caniuse.com"-->
+            <!--                                 src="../_public/src/img/emotion/flexible_layout.png"/>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </section>-->
+            <!--            &lt;!&ndash; Mixins Browserkompatibilität ENDE &ndash;&gt;-->
 
             <!-- Nesting START -->
             <section id="item-70" class="vh-100 jf-content-section">
@@ -279,20 +307,20 @@
                         </div>
 
                         <div class="jf-codeblock">
-                        <p class="jf-codetext fw-bold">
-                        <pre>.wrapper .externerLink {
+                            <p class="jf-codetext fw-bold">
+                            <pre>.wrapper .externerLink {
  color: red;
 }
 </pre>
 
-                        </p>
-                        <p class="figure-caption">Datei.css</p>
+                            </p>
+                            <p class="figure-caption">Datei.css</p>
                         </div>
                     </div>
 
                 </div>
 
-        </section>
+            </section>
             <!-- Nesting ENDE -->
 
             <!-- Variablen START -->
@@ -305,7 +333,9 @@
                         <div>
                             <ul>
                                 <li>Mehrfachverwendung</li>
-                                <li>Mittlerweile auch in CSS möglich <li class="fa fa-arrow-right "></li> nur eingeschränkt!</li>
+                                <li>Mittlerweile auch in CSS möglich
+                                <li class="fa fa-arrow-right "></li>
+                                nur eingeschränkt!</li>
                             </ul>
                         </div>
                         <div class="jf-codeblock mb-3">
@@ -407,9 +437,13 @@ $secondary-color: green;
                     <div class="col-8 jf-content-container p-5">
                         <div>
                             <ul>
-                                <li><a target="_blank" href="https://shopwaredemo.noneddon.de/">Shopware Frontend</a></li>
-                                <li><a target="_blank" href="https://shopwaredemo.noneddon.de/admin">Shopware Admin</a></li>
-                                <li><a target="_blank" href="https://codepen.io/julian-fle/pen/eYEGZmb">DHBW-Seite (nur beispielhaft)</a></li>
+                                <li><a target="_blank" href="https://shopwaredemo.noneddon.de/">Shopware Frontend</a>
+                                </li>
+                                <li><a target="_blank" href="https://shopwaredemo.noneddon.de/admin">Shopware Admin</a>
+                                </li>
+                                <li><a target="_blank" href="https://codepen.io/julian-fle/pen/eYEGZmb">DHBW-Seite (nur
+                                    beispielhaft)</a>
+                                </li><li><a target="_blank" href="https://sass-lang.com/guide">Beispiele SCSS Lang</a></li>
                             </ul>
                         </div>
                     </div>
@@ -439,16 +473,24 @@ $secondary-color: green;
                     <div class="col-8 jf-content-container p-5">
                         <div>
                             <ul>
-                                <li><a target="_blank" href="https://dev-supp.de/blog/sass-vs-scss-vs-less">https://dev-supp.de/blog/sass-vs-scss-vs-less</a></li>
+                                <li><a target="_blank" href="https://dev-supp.de/blog/sass-vs-scss-vs-less">https://dev-supp.de/blog/sass-vs-scss-vs-less</a>
+                                </li>
                                 <li><a target="_blank" href="https://sass-lang.com/">https://sass-lang.com/</a></li>
-                                <li><a target="_blank" href="https://nextgeneration.mysign.ch/de/themen/wissen/frontend-entwicklung/scss-sass.html">https://nextgeneration.mysign.ch/de/themen/wissen/frontend-entwicklung/scss-sass.html</a></li>
+                                <li><a target="_blank"
+                                       href="https://nextgeneration.mysign.ch/de/themen/wissen/frontend-entwicklung/scss-sass.html">https://nextgeneration.mysign.ch/de/themen/wissen/frontend-entwicklung/scss-sass.html</a>
+                                </li>
                                 <li><a target="_blank" href="https://lesscss.org/">https://lesscss.org/</a></li>
-                                <li><a target="_blank" href="https://developers.shopware.com/designers-guide/less/">https://developers.shopware.com/designers-guide/less/</a></li>
-                                <li><a target="_blank" href="https://codepen.io/julian-fle/pen/eYEGZmb">https://codepen.io/julian-fle/pen/eYEGZmb</a></li>
-                                <li><a target="_blank" href="https://jsonformatter.org/scss-to-css">Als Tool: https://jsonformatter.org/scss-to-css</a></li>
-                                <li><a target="_blank" href="https://getbootstrap.com/">https://getbootstrap.com/</a></li>
+                                <li><a target="_blank" href="https://developers.shopware.com/designers-guide/less/">https://developers.shopware.com/designers-guide/less/</a>
+                                </li>
+                                <li><a target="_blank" href="https://codepen.io/julian-fle/pen/eYEGZmb">https://codepen.io/julian-fle/pen/eYEGZmb</a>
+                                </li>
+                                <li><a target="_blank" href="https://jsonformatter.org/scss-to-css">Als Tool:
+                                    https://jsonformatter.org/scss-to-css</a></li>
+                                <li><a target="_blank" href="https://getbootstrap.com/">https://getbootstrap.com/</a>
+                                </li>
                                 <li><a target="_blank" href="https://fontawesome.com/">https://fontawesome.com/</a></li>
-                                <li><a target="_blank" href="https://sass-lang.com/styleguide/brand">https://sass-lang.com/styleguide/brand</a></li>
+                                <li><a target="_blank" href="https://sass-lang.com/styleguide/brand">https://sass-lang.com/styleguide/brand</a>
+                                </li>
 
                             </ul>
                         </div>
@@ -459,29 +501,29 @@ $secondary-color: green;
             </section>
             <!-- Quellen ENDE -->
 
-        <div class="main-navigation">
-            <div class="container">
-                <!-- Begin of the navigation -->
-                <nav class="navbar navbar-expand-lg bg-secondary fixed-bottom">
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav text-center d-flex justify-content-around w-100">
-                            <li class="nav-item"><a class="nav-link" href="#item-10">Ein Präprozessor?</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#item-20">Less, SCSS und co.</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#item-30">Mixins</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#item-40">Mixins Beispiel</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#item-50">Kompatibilität</a></li>
-<!--                            <li class="nav-item"><a class="nav-link" href="#item-60">Kompatibilität Beispiel</a></li>-->
-                            <li class="nav-item"><a class="nav-link" href="#item-70">Nesting</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#item-80">Variablen</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#item-90">Codemenge</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#item-100">Praxisbeispiel</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#item-1000">Danke!</a></li>
-                        </ul>
-                    </div>
-                </nav>
+            <div class="main-navigation">
+                <div class="container">
+                    <!-- Begin of the navigation -->
+                    <nav class="navbar navbar-expand-lg bg-secondary fixed-bottom">
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav text-center d-flex justify-content-around w-100">
+                                <li class="nav-item"><a class="nav-link" href="#item-10">Ein Präprozessor?</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#item-20">Less, SCSS und co.</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#item-30">Mixins</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#item-40">Mixins Beispiel</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#item-50">Kompatibilität</a></li>
+                                <!--                            <li class="nav-item"><a class="nav-link" href="#item-60">Kompatibilität Beispiel</a></li>-->
+                                <li class="nav-item"><a class="nav-link" href="#item-70">Nesting</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#item-80">Variablen</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#item-90">Codemenge</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#item-100">Praxisbeispiel</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#item-1000">Danke!</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
             </div>
         </div>
-    </div>
 
     </div>
 
@@ -490,34 +532,34 @@ $secondary-color: green;
     <!-- Begin of the footer -->
     <footer class="bg-secondary text-secondary text-center pt-5 pb-5">
         <div class="w-100">
-        <div class="row w-100 m-0">
-            <div class="col-12 pb-2">
-                <p>
-                    Ein Vortrag von Gloria Tamakloe und Julian Fleischmann<br>
-                    DHBW Mosbach | ON 21<br>
-                </p>
-                <a class="text-secondary" data-toggle="collapse" data-target="#quellen" href="#quellen">Quellen</a>
+            <div class="row w-100 m-0">
+                <div class="col-12 pb-2">
+                    <p>
+                        Ein Vortrag von Gloria Tamakloe und Julian Fleischmann<br>
+                        DHBW Mosbach | ON 21<br>
+                    </p>
+                    <a class="text-secondary" data-toggle="collapse" data-target="#quellen" href="#quellen">Quellen</a>
+                </div>
             </div>
-        </div>
 
 
-        <div class="col-12 mt-2 pb-2">
+            <div class="col-12 mt-2 pb-2">
 
-<!--                                <a class="text-secondary" data-toggle="collapse" data-target="#datenschutz" href="#datenschutz"-->
-<!--                                   aria-expanded="false"-->
-<!--                                   aria-controls="datenschutz"><b>Datenschutz</b> <i class="fas fa-angle-right"></i></a>                    -->
-<!--            -->
-            <!--                    <div class="container collapse multi-collapse p-3" id="datenschutz">-->
+                <!--                                <a class="text-secondary" data-toggle="collapse" data-target="#datenschutz" href="#datenschutz"-->
+                <!--                                   aria-expanded="false"-->
+                <!--                                   aria-controls="datenschutz"><b>Datenschutz</b> <i class="fas fa-angle-right"></i></a>                    -->
+                <!--            -->
+                <!--                    <div class="container collapse multi-collapse p-3" id="datenschutz">-->
 
-            <!--                        <p>-->
-            <!--                            <strong>Datenschutzhinweise gemäß EU-Datenschutz-Grundverordnung (DSGVO)</strong>-->
-            <!--                            Wir setzen die seit dem 25. Mai 2018 geltende EU-Datenschutz-Grundverordnung (DSGVO) um,-->
-            <!--                            insbesondere, wenn es um die Verarbeitung Ihrer personenbezogenen Daten durch uns sowie um-->
-            <!--                            die Ihnen dabei zustehenden Rechte geht. Die Hinweise werden soweit erforderlich-->
-            <!--                            aktualisiert und sind im Detail nachlesbar unter:-->
+                <!--                        <p>-->
+                <!--                            <strong>Datenschutzhinweise gemäß EU-Datenschutz-Grundverordnung (DSGVO)</strong>-->
+                <!--                            Wir setzen die seit dem 25. Mai 2018 geltende EU-Datenschutz-Grundverordnung (DSGVO) um,-->
+                <!--                            insbesondere, wenn es um die Verarbeitung Ihrer personenbezogenen Daten durch uns sowie um-->
+                <!--                            die Ihnen dabei zustehenden Rechte geht. Die Hinweise werden soweit erforderlich-->
+                <!--                            aktualisiert und sind im Detail nachlesbar unter:-->
 
-            <!--                        </p>-->
-        </div>
+                <!--                        </p>-->
+            </div>
         </div>
 
 
